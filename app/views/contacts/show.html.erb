@@ -1,1 +1,6 @@
-<h2> This is your contact! </h2>
+<h2><%= @contact.subject%></h2>
+
+<div><%= "#{@contact.first_name} #{@contact.last_name}" %></div>
+<div><%= @contact.email %></div>
+<br>
+<div><%=@contact.description%></div>

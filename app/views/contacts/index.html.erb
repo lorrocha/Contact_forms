@@ -1,6 +1,9 @@
 <h2>Contact Inquiries</h2>
 
+<div>
+<%= link_to 'New Contact Inquiry', new_contact_path%></div>
+<br>
 <% @contacts.each do |con|%>
-  <div><%= con.subject %></div>
+  <div><%= link_to con.subject, contact_path(con) %></div>
 
 <%end%>

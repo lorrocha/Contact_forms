@@ -21,6 +21,14 @@ class ContactsController < ApplicationController
     @contacts = Contact.all
   end
 
+  def destroy
+    if Contact.destroy(params[:id])
+      redirect_to contacts_path
+    else
+      redirect_to contacts_path, notice: 'WARNING: The contact inquiry was not deleted'
+    end
+  end
+
   private
 
   def set_contact

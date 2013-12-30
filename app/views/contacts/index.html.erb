@@ -4,6 +4,6 @@
 <%= link_to 'New Contact Inquiry', new_contact_path%></div>
 <br>
 <% @contacts.each do |con|%>
-  <div><%= link_to con.subject, contact_path(con) %></div>
+  <div><%= link_to con.subject, contact_path(con) %> <%= link_to 'Delete', contact_path(con), :method=>'delete'%></div>
 
 <%end%>
